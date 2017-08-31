@@ -171,4 +171,4 @@ exec nm-applet
 exec pasystray
 #exec slack
 #exec telegram-desktop
-exec --no-startup-id feh --bg-scale /home/moucho/.config/i3/wallhaven-473334.jpg
+exec --no-startup-id feh --bg-scale ~/.config/i3/airplanes-sketch.png
