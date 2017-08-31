@@ -1,0 +1,174 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #282f3a
+background-alt = #444
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[bar/moubar]
+width = 100%
+height = 35
+;offset-x = 1%
+;offset-y = 1%
+fixed-center = false
+
+bottom = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+underline-size = 9
+underline-color = ${colors.background-alt}
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 5
+padding-right = 5
+
+module-margin-left = 2
+module-margin-right = 2
+
+font-0 = Roboto:pixelsize=12;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = FontAwesome:pixelsize=10
+font-4 = monospace
+
+modules-left = memory cpu
+modules-center = i3
+modules-right = battery temperature date 
+
+tray-position = right
+tray-padding = 2
+;tray-transparent = true
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+;
+
+
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused-background = ${colors.background-alt}
+label-focused-padding = 3
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible-background = ${self.label-focused-background}
+label-visible-padding = 4
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 8
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label>     <ramp-load>
+label = CPU    
+ramp-load-font = 5
+ramp-load-0 = "❘┉┉┉┉┉┉┉"
+ramp-load-1 = "━❘┉┉┉┉┉┉"
+ramp-load-2 = "━━❘┉┉┉┉┉"
+ramp-load-3 = "━━━❘┉┉┉┉"
+ramp-load-4 = "━━━━❘┉┉┉"
+ramp-load-5 = "━━━━━❘┉┉"
+ramp-load-6 = "━━━━━━❘┉"
+ramp-load-7 = "━━━━━━━❘"
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label>    <bar-used>
+label = MEM    
+bar-used-font = 5
+bar-used-width = 8
+bar-used-fill = ━
+bar-used-empty = ┉
+bar-used-indicator = ❘
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = " %Y-%m-%d"
+
+time = %H:%M
+
+format-prefix-foreground = ${colors.foreground-alt}
+
+label = %{T3} %{T-}%date%    %{T3}  %{T-}%time%
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 100
+time-format = %H:%M
+
+format-charging = %{F#19e8e8}%{T4}%{T-} <label-charging>
+
+label-discharging = %time%
+
+format-discharging =  <ramp-capacity> <label-discharging>
+
+ramp-capacity-0 = %{B#f00}
+ramp-capacity-1 = %{F#f49b42}
+ramp-capacity-2 = %{F#ff0}
+ramp-capacity-3 = %{F#c5e819}
+ramp-capacity-4 = %{F#1dd35a}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = %{T3}
+ramp-1 = %{T3}
+ramp-2 = %{T3}
