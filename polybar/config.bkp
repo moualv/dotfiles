@@ -18,7 +18,7 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/base]
+[bar/moubar]
 width = 100%
 height = 35
 ;offset-x = 1%
@@ -48,7 +48,11 @@ font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome:pixelsize=10
 font-4 = monospace
 
+modules-left = memory cpu
+modules-center = i3
+modules-right = battery temperature date 
 
+tray-position = right
 tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
@@ -64,22 +68,6 @@ tray-padding = 2
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
-[bar/monitor]
-inherit = bar/base
-monitor = HDMI1
-modules-left = memory cpu
-modules-center = i3
-modules-right = date
-tray-position = 
-
-[bar/laptop]
-inherit = bar/base
-monitor = eDP1
-modules-left = memory cpu
-modules-center = i3
-modules-right = battery temperature date 
-tray-position = 
-
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -87,7 +75,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-pin-workspaces = true
+;pin-workspaces = true
 ;
 
 
@@ -158,7 +146,6 @@ full-at = 100
 time-format = %H:%M
 
 format-charging = %{F#19e8e8}%{T4}%{T-} <label-charging>
-label-full = FULL %{F#1dd35a}
 
 label-discharging = %time%
 

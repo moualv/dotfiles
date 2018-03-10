@@ -1,5 +1,5 @@
 #!/bin/bash
-POLYBAR_CONFIG_FILE=~/.config/polybar/config
+POLYBAR_CONFIG_FILE=~/dotfiles/polybar/config
 
 CONNECTED_SCREENS=$(xrandr --query | grep -E 'connected.*[0-9]{1,4}x[0-9]{1,4}' | awk '{print $1}')
 
