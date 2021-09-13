@@ -1,0 +1,5 @@
+TODO automatizar instalado nerd-fonts https://github.com/ryanoasis/nerd-fonts (actualmente usamos hack)
+TODO automatizar tema https://github.com/Mayccoll/Gogh
+
+TODO automatizar zsh conf
+
