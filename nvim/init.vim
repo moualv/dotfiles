@@ -10,6 +10,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'mhartington/formatter.nvim'
+Plug 'folke/trouble.nvim'
 call plug#end()
 
 " Relative numbers
