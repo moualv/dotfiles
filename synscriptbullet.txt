@@ -3,3 +3,4 @@ TODO automatizar tema https://github.com/Mayccoll/Gogh
 
 TODO automatizar zsh conf
 
+TODO Comprobar si se puede ejecutar PlugClean interactivo

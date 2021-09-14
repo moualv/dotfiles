@@ -11,7 +11,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'mhartington/formatter.nvim'
 Plug 'folke/trouble.nvim'
-Plug 'folke/lsp-colors.nvim'
 call plug#end()
 
 " Relative numbers
@@ -95,3 +94,5 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm({ 'keys': '<CR>', 'select': v:true })", { expr = true })
 
 EOF
+
+

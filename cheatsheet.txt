@@ -64,7 +64,7 @@ TODO vimdiff cheatsheet (and make it look good)
 TODO replace globally
 TODO mostrar chambios de git en el margen
 TODO buscar otra manera de mostrar los errores de LSP
-TODO fix lspsaga codeaction
+TODO try to use lspsaga codeaction
 TODO fix lspsaga hover_doc (maybe is working as expected and I want something like hover_signature or hover_type)
 TODO command open cheatsheet
 TODO lsp refactor move file
