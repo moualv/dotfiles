@@ -19,7 +19,6 @@ Clipboard (in copy mode)
 <space> -> begin selection
 y -> copy
 
-
 NVIM
 
 Clipboard
@@ -32,13 +31,17 @@ Telescope
 <space>fb -> Find buffers
 C-q -> Show more results
 
+LSPConfig
+gd -> definition
+K -> hover doc
+<C-k> -> signature help (also on insert mode)
+
 LSPSaga
 <C-j> -> diagnostic next
 <leader>gk -> signature help
 K -> hover_doc
 gh -> find_references
   o -> go to file in menu
-gd -> definition
 gr -> rename
 gc -> code_action
 
