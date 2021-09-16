@@ -1,6 +1,6 @@
 TODO automatizar instalado nerd-fonts https://github.com/ryanoasis/nerd-fonts (actualmente usamos hack)
 TODO automatizar tema https://github.com/Mayccoll/Gogh
 
-TODO automatizar zsh conf
+TODO add ripgrep as dependency
 
 TODO Comprobar si se puede ejecutar PlugClean interactivo
