@@ -33,17 +33,15 @@ C-q -> Show more results
 
 LSPConfig
 gd -> definition
-K -> hover doc
-<C-k> -> signature help (also on insert mode)
 
 LSPSaga
 <C-j> -> diagnostic next
-<leader>gk -> signature help
+<C-k> -> signature help (also on insert mode)
 K -> hover_doc
 gh -> find_references
   o -> go to file in menu
 gr -> rename
-gc -> code_action
+<leader>ca -> code_action
 
 Trouble
 <leader>gt -> toggle trouble
@@ -72,4 +70,5 @@ TODO lspsaga setup go to definition preview
 TODO typescript: move files
 TODO migrate to nvim-cmp from compe
 TODO pretty show diagnostics
-
+TODO handle vim marks
+TODO handle vim close tags
