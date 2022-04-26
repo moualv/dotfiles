@@ -70,5 +70,5 @@ TODO lspsaga setup go to definition preview
 TODO typescript: move files
 TODO migrate to nvim-cmp from compe
 TODO pretty show diagnostics
-TODO handle vim marks
+TODO handle vim bookmarks
 TODO handle vim close tags
